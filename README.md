@@ -64,3 +64,16 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+# Initialize app
+
+- install [brew](https://brew.sh)
+- install php, composer though brew
+
+```
+composer create-project laravel/laravel app
+cd app
+npm install --save-dev vue @vitejs/plugin-vue
+composer require inertiajs/inertia-larave
+npm install @inertiajs/vue3
+```
