@@ -76,4 +76,5 @@ cd app
 npm install --save-dev vue @vitejs/plugin-vue
 composer require inertiajs/inertia-larave
 npm install @inertiajs/vue3
+npm install --save-dev eslint eslint-plugin-vue
 ```
