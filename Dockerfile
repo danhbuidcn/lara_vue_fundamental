@@ -28,5 +28,15 @@ COPY . /app
 # Copy existing application directory permissions
 COPY --chown=www:www . /app
 
+# Install other dependencies package
+RUN apt-get update && apt-get install -y libonig-dev libzip-dev \
+    && docker-php-ext-install pdo_mysql \
+    && pecl install xdebug \
+    && docker-php-ext-enable xdebug \
+    && php artisan key:generate
+RUN npm install
+RUN npm run build
+RUN composer install
+
 EXPOSE 8000
 CMD ["php", "artisan", "serve", "--host=0.0.0.0"]
